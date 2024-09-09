@@ -1,35 +1,35 @@
-// document.addEventListener("scroll", function() {
-//   const scrollPosition = window.scrollY;
-//   const windowHeight = window.innerHeight;
-//   const resumeSection = document.getElementById("resume");
-//   const contactSection = document.getElementById("contact");
-
-//   // Show Resume section when scrolled halfway
-//   if (scrollPosition > windowHeight / 2) {
-//     resumeSection.classList.add("show");
-//   } else {
-//     resumeSection.classList.remove("show");
-//   }
-
-//   // Show Contact section when scrolled 75% down
-//   if (scrollPosition > windowHeight * 0.75) {
-//     contactSection.classList.add("show");
-//   } else {
-//     contactSection.classList.remove("show");
-//   }
-// });
-// Smooth scroll behavior for internal links
 document.querySelectorAll('a[href^="#"]').forEach(anchor => {
   anchor.addEventListener('click', function (e) {
     e.preventDefault();
 
-    document.querySelector(this.getAttribute('href')).scrollIntoView({
-      behavior: 'smooth'
+    const targetId = this.getAttribute('href');
+    const targetElement = document.querySelector(targetId);
+
+    // Scroll to the target element
+    targetElement.scrollIntoView({
+      behavior: 'smooth',
+      block: 'start'
     });
   });
 });
 
-document.addEventListener('DOMContentLoaded', function () {
-  var animationContainer = document.querySelector('.animation-container');
-  animationContainer.classList.add('animate-once');
-});
+// window.addEventListener('scroll', function() {
+//   const intro = document.querySelector('.intro');
+//   const description = document.querySelector('.description');
+//   const image = document.querySelector('.image');
+
+//   const scrollPosition = window.scrollY;
+
+//   intro.style.transform = `translateX(-${scrollPosition * 1}px)`;
+//   description.style.transform = `translateX(-${scrollPosition * 1}px)`;
+//   image.style.transform = `translateX(${scrollPosition * 1.5}px)`;
+// });
+
+function changeImage() {
+  const imageElement = document.querySelector('.image img');
+  if (imageElement.src.endsWith('nightBackground.JPG')) {
+    imageElement.src = 'lightBackground.JPG';
+  } else {
+    imageElement.src = 'nightBackground.JPG';
+  }
+}

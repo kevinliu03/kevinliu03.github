@@ -5,34 +5,67 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link rel="stylesheet" type="text/css" href="style.css">
-  <script src="script.js"></script>
-  <title>Your Title</title>
+  <link rel="icon" href="websiteLogo.png" type="image/png">
+  <script src="script.js" defer></script>
+  <title>Kevin Liu</title>
 </head>
 
 <body>
   <header>
     <div class="header-container">
-      <div class="name">Kevin Liu</div>
+      <div class="name" onclick="changeImage()">Kevin Liu</div>
       <nav>
         <div class="header-options">
           <ul>
-            <li><a class="a" href="a.html">ABC</a></li>
-            <li><a class="b" href="b.html">DEF</a></li>
-            <li><a class="c" href="c.html">GHI</a></li>
+            <li><a class="a" href="#about-Me">About Me</a></li>
+            <li><a class="b" href="#experience">Experiences</a></li>
+            <li><a class="c" href="#personal-Projects">Personal Projects</a></li>
           </ul>
         </div>
       </nav>
     </div>
   </header>
+
   <div id="main">
     <div class="main-text">
-      <div class="intro">This is work in progress</div>
-      <div class="description">test</div>
+      <div class="intro">Welcome to my website</div>
+      <div class="description">I'm Kevin Liu</div>
     </div>
     <div class="image">
-      <img src='Untitled.png' alt='Main-Website-Image'>
+      <img src='nightBackground.JPG' alt='Main-Website-Image'>
     </div>
   </div>
-</body>
 
-</html>
+  <div class="section" id="about-Me">
+    <h2 class="section-title">About Me</h2>
+    <div class="section-description">I'm an Eletrical Engineer studying at Texas A&M University with a passion for
+      Computer Science which is why I made this website. It's my way of learning html and css while being able to use my
+      previous knowledge of javascript . All the different things that are in this website was learned in the time that
+      I made this website. I'll continue to improve this website as I learn more about the options that are in store for
+      me for to better improve this website. </div>
+  </div>
+
+  <div class="section" id="experience">
+    <h2 class="section-title">Experience</h2>
+    <div class="section-description">Amsysis: Cyber Security Intern - June to August 2024</div>
+  </div>
+
+  <div class="section" id="personal-Projects">
+    <h2 class="section-title">Personal Projects</h2>
+    <div class="section-description">Personal Website - <a href="https://github.com/kevinliu03/kevinliu03.github"
+        class="repository" target="_blank">Github Repository</a></div>
+    <p>This is the current website that uses HTML, CSS, and JavaScript.</p>
+    <div class="section-description">Chess Extension - <a href="https://github.com/kevinliu03/Chess-Extension"
+        class="repository" target="_blank">Github Repository</a></div>
+    <p>This is an extension that I made for Chess.com that adds a button to easily import a player's game to Lichess
+      after a game is finished. This allows a player to game review the game that they just played with the
+      assistance of Stock Fish which is the strongest game engine for chess. This was made in JavaScript.</p>
+    <div class="section-description">TAMU Registration Extension - <a
+        href="https://github.com/kevinliu03/TAMU-Registration-Extension" class="repository" target="_blank">Github
+        Repository</a></div>
+    <p>This is an extension that I made for students to check for ratings on rate my professor. Most students
+      would use Rate My Professor to decide on if they would register for that class. I noticed that everytime a
+      student would need to find a professor it would take atleast a few seconds to search the professor up. These
+      few seconds add up once you see that there are multiple professors for each class and a student would be
+      take more than one class. This extension was coded in JavaScript.</p>
+  </div>
